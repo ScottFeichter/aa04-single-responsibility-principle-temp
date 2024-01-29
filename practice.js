@@ -35,7 +35,7 @@ const recipes = {
 /*************************** HELPER FUNCTIONS  ****************************/
 
 // Bake the number of pies specified by the pieQuantity
-let bakePieQuantity = (pieQuantity, pieType, recipe) => {
+let combingingIngredients = (pieQuantity, pieType, recipe) => {
   for (let i = 0; i < pieQuantity; i++) {
     // Print the ingredients for each ingredient in the recipe
     let combiningMsg = `Combining ingredients for ${pieType}: `;
@@ -78,7 +78,7 @@ function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
   // Find the recipe for the pieType specified
   const recipe = recipes[pieType];
 
-  bakePieQuantity(pieQuantity, pieType, recipe);
+  combingingIngredients(pieQuantity, pieType, recipe);
 
   const costOfPie = printCost(recipe);
 
@@ -88,7 +88,7 @@ function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
 }
 
 /******************************* LOCAL TESTS *******************************/
-bakeAndSellPies("applePie", 5, 2.5);
+// bakeAndSellPies("applePie", 5, 2.5);
 // bakeAndSellPies("pumpkinPie", 2);
 // bakeAndSellPies("cherryPie", 7, 1.7);
 
